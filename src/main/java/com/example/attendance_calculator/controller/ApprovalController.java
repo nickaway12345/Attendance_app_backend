@@ -6,10 +6,13 @@ import com.example.attendance_calculator.service.RegularizeService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,6 +21,9 @@ import java.util.Scanner;
 @RestController
 @RequestMapping("/approvals")
 public class ApprovalController {
+
+    @Value("${data.userDataFile.file}")
+    private String FILE_PATH;
 
     @Autowired
     private RegularizeService regularizeService;
@@ -56,36 +62,33 @@ public class ApprovalController {
 
 
 
-    private static List<String> getReportees(String managerId) {
+    private List<String> getReportees(String managerId) {
         List<String> reportees = new ArrayList<>();
 
         try {
+            // Read the file content
+            String jsonString = Files.readString(Paths.get(FILE_PATH), StandardCharsets.UTF_8);
 
-            InputStream is = ApprovalController.class.getClassLoader().getResourceAsStream("assets/credentials.json");
+            // Parse the JSON array
+            JSONArray usersArray = new JSONArray(jsonString);
 
-            if (is == null) {
-                throw new RuntimeException("File not found: assets/credentials.json");
-            }
-
-
-            String jsonString = new Scanner(is, StandardCharsets.UTF_8).useDelimiter("\\A").next();
-
-
-            JSONObject jsonObject = new JSONObject(jsonString);
-            JSONArray usersArray = jsonObject.getJSONArray("users");
-
-
+            // Iterate through the array to find reportees
             for (int i = 0; i < usersArray.length(); i++) {
                 JSONObject user = usersArray.getJSONObject(i);
 
+                // Check if the "reporting_manager" field exists and is not null
+                if (user.has("reporting_manager") && !user.isNull("reporting_manager")) {
+                    String reportingManager = user.getString("reporting_manager");
 
-                if (user.getString("manager").equals(managerId)) {
-                    reportees.add(user.getString("username"));
+                    // Compare with the provided managerId
+                    if (reportingManager.equals(managerId)) {
+                        reportees.add(user.getString("username"));
+                    }
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("Error reading userdata.json", e);
         }
 
         return reportees;

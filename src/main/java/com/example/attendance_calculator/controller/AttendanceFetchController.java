@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://192.168.10.17:8000")
 public class AttendanceFetchController {
 
     @Autowired

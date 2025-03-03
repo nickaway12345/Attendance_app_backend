@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://192.168.10.17:8000")
 public class HolidayController {
 
     @Autowired
