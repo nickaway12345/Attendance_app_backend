@@ -1,1 +1,154 @@
-[{"username":"HRCPL112","password":"pbkdf2_sha256$720000$l9gvSHkplARIqz1TgRdzVS$N+OP16MZnMN3Q82TPUY/9Dlia6MTP+rikr2KEPpdPNk=","first_name":"Aditya","last_name":"Kamble","email":"aditya@hashrate.in","reporting_manager":"HRCPL109"},{"username":"HRCPL123","password":"pbkdf2_sha256$720000$BNNt3EapNuhadZ6UKeKd39$5p6JO2JjiUXHc26HQ+vKU7YJAwlzwFBEWaLEZkiBPg4=","first_name":"Sahil","last_name":"Deshpande","email":"sahil@hashrate.in","reporting_manager":"HRCPL112"},{"username":"HRCPL122","password":"pbkdf2_sha256$720000$uuAWPiTlSdrraJaXHE0jyL$BHLD5+OuzmIb4GSxEYkyF6/e5ye/WEc7BZbxlxzUrvU=","first_name":"Abdul","last_name":"Aamir","email":"aamir@isiriinc.com","reporting_manager":"HRCPL112"},{"username":"HRCPL130","password":"pbkdf2_sha256$720000$EUWLKcovPtzjHIYcvv1ta4$IGPmeCUsVtexpjqJtlySKbl87FpWROGfh5104G5p7pA=","first_name":"Hamza","last_name":"Shaikh","email":"hamza@hashrate.in","reporting_manager":"HRCPL111"},{"username":"HRCPL125","password":"pbkdf2_sha256$720000$ORF0oUKdxLRNkiU3eNMjyW$UTVTNPibkm5kFIpw4szu/rtj6a55rFL/VsKxxwrdzbQ=","first_name":"Siddhesh","last_name":"Shinde","email":"269siddhesh@gmail.com","reporting_manager":"HRCPL111"},{"username":"HRCPL109","password":"pbkdf2_sha256$720000$fgEvuMcDAecRsOwb6MQyRp$7fDBjKbn6rRwC3wIxA+Txt2Lb824WwUTGi7r2fcGXEM=","first_name":"Sujay","last_name":"Pabbathi","email":"sujay@hashrate.in","reporting_manager":"HRCPL108"},{"username":"HRCPL129","password":"pbkdf2_sha256$720000$ADBeCtF6NO7hRa86j7jMMf$3MuhzWPDiwfSrRarlHvN/TVjFozwHPcoeHM+d+5bzd0=","first_name":"Rutuja","last_name":"Sawant","email":"accounts@hashrate.in","reporting_manager":"HRCPL119"},{"username":"HRCPL126","password":"pbkdf2_sha256$720000$uS4Xx9uVMMtXavHfFnWDOc$LjJnTwzfbTFr6lE/e9GIvz4qFJKCvLew6wfYlZVX6Ls=","first_name":"Akash","last_name":"Redekar","email":"akashredekar166@gmail.com","reporting_manager":"HRCPL111"},{"username":"HRCPL119","password":"pbkdf2_sha256$720000$Gw5DWL4LBS6GVLBXkKkc6N$7f2jFoYJ31hWdi15B9RbkBsH4MvxztIv93D5+n0MxDQ=","first_name":"Pratikshya","last_name":"Sahu","email":"pratikshya@hashrate.in","reporting_manager":"HRCPL109"},{"username":"HRCPL115","password":"pbkdf2_sha256$720000$HF91omGDuiRlTcgPDm21Pr$a1a1qVR+X2VPTzGREFjtFifaa40BfRSl1WVfeWBU2n8=","first_name":"Satyen","last_name":"Deshpande","email":"satyen@hashrate.in","reporting_manager":"HRCPL109"},{"username":"HRCPL124","password":"pbkdf2_sha256$720000$X7jGd6ODsWMfCN4B8xi9EV$pAZxncTxqTQJYSb4PuySPOg5wVOm0Kg3wbifv2sCslg=","first_name":"Kunal","last_name":"Dane","email":"kdane2267@gmail.com","reporting_manager":"HRCPL112"},{"username":"HRCPL116","password":"pbkdf2_sha256$720000$hBeCAQLKzjrG4jZsRORnZS$sAX7ZBMKNJTzONEHmcGrvMNrAfxMXZlsUeKt8/AE0aQ=","first_name":"Shantanu","last_name":"Mokal","email":"shantanu@hashrate.in","reporting_manager":"HRCPL115"},{"username":"HRCPL111","password":"pbkdf2_sha256$720000$MxX8wcTg6XX8OlTjpUGogV$Eswpufwxm9hUkQ32nQlZyC5uPOqAyVJOzyoOfhTncw0=","first_name":"Ammar","last_name":"Patel","email":"ammar@hashrate.in","reporting_manager":"HRCPL108"},{"username":"HRCPL118","password":"pbkdf2_sha256$720000$xuEonJo3I42QwLwxHeayw5$ZpdKxMp37rdhKaRazsfGLUdNFHfNJ7oJDZwREQmtlRo=","first_name":"Isha","last_name":"Joshi","email":"isha@hashrate.in","reporting_manager":"HRCPL115"},{"username":"HRCPL127","password":"pbkdf2_sha256$720000$v8uL7I7LSk3LcfZG22VTnc$y7f6zpH2uFu4qZ8Wwbfbpj6l1pSFA2D8oxr5cPkYQZE=","first_name":"Adarsh","last_name":"Srivastava","email":"Adarshsri880@gmail.com","reporting_manager":"HRCPL112"},{"username":"HRCPL108","password":"pbkdf2_sha256$720000$Rc0kqfRpQjxwasTwiGlZnt$jTz1FTaPeZRBldRh4jHxJpVXCAgIOuz6WaHe+YTxmWk=","first_name":"Sanjeev","last_name":"Sharma","email":"sanjeev@hashrate.in","reporting_manager":null},{"username":"HRCPL117","password":"pbkdf2_sha256$720000$qjg3PwowEXieGiP8Hdfm4L$uS2rwkmqSy7iWm+NvjJRhrzuAs7Xeaz2HcbRz7rJIWo=","first_name":"Sudarshan","last_name":"Swain","email":"sudarshan@isiriinc.com","reporting_manager":"HRCPL109"}]
+[
+  {
+    "username": "HRCPL112",
+    "password": "pbkdf2_sha256$720000$l9gvSHkplARIqz1TgRdzVS$N+OP16MZnMN3Q82TPUY/9Dlia6MTP+rikr2KEPpdPNk=",
+    "first_name": "Aditya",
+    "last_name": "Kamble",
+    "email": "aditya@hashrate.in",
+    "reporting_manager": "HRCPL109"
+  },
+  {
+    "username": "HRCPL123",
+    "password": "pbkdf2_sha256$720000$BNNt3EapNuhadZ6UKeKd39$5p6JO2JjiUXHc26HQ+vKU7YJAwlzwFBEWaLEZkiBPg4=",
+    "first_name": "Sahil",
+    "last_name": "Deshpande",
+    "email": "sahil@hashrate.in",
+    "reporting_manager": "HRCPL112"
+  },
+  {
+    "username": "HRCPL130",
+    "password": "pbkdf2_sha256$720000$EUWLKcovPtzjHIYcvv1ta4$IGPmeCUsVtexpjqJtlySKbl87FpWROGfh5104G5p7pA=",
+    "first_name": "Hamza",
+    "last_name": "Shaikh",
+    "email": "hamza@hashrate.in",
+    "reporting_manager": "HRCPL111"
+  },
+  {
+    "username": "HRCPL125",
+    "password": "pbkdf2_sha256$720000$ORF0oUKdxLRNkiU3eNMjyW$UTVTNPibkm5kFIpw4szu/rtj6a55rFL/VsKxxwrdzbQ=",
+    "first_name": "Siddhesh",
+    "last_name": "Shinde",
+    "email": "269siddhesh@gmail.com",
+    "reporting_manager": "HRCPL111"
+  },
+  {
+    "username": "HRCPL109",
+    "password": "pbkdf2_sha256$720000$fgEvuMcDAecRsOwb6MQyRp$7fDBjKbn6rRwC3wIxA+Txt2Lb824WwUTGi7r2fcGXEM=",
+    "first_name": "Sujay",
+    "last_name": "Pabbathi",
+    "email": "sujay@hashrate.in",
+    "reporting_manager": "HRCPL108"
+  },
+  {
+    "username": "HRCPL129",
+    "password": "pbkdf2_sha256$720000$ADBeCtF6NO7hRa86j7jMMf$3MuhzWPDiwfSrRarlHvN/TVjFozwHPcoeHM+d+5bzd0=",
+    "first_name": "Rutuja",
+    "last_name": "Sawant",
+    "email": "accounts@hashrate.in",
+    "reporting_manager": "HRCPL119"
+  },
+  {
+    "username": "HRCPL126",
+    "password": "pbkdf2_sha256$720000$uS4Xx9uVMMtXavHfFnWDOc$LjJnTwzfbTFr6lE/e9GIvz4qFJKCvLew6wfYlZVX6Ls=",
+    "first_name": "Akash",
+    "last_name": "Redekar",
+    "email": "akashredekar166@gmail.com",
+    "reporting_manager": "HRCPL111"
+  },
+  {
+    "username": "HRCPL117",
+    "password": "pbkdf2_sha256$720000$qjg3PwowEXieGiP8Hdfm4L$uS2rwkmqSy7iWm+NvjJRhrzuAs7Xeaz2HcbRz7rJIWo=",
+    "first_name": "Sudarshan",
+    "last_name": "Swain",
+    "email": "sudarshan@isiriinc.com",
+    "reporting_manager": "HRCPL109"
+  },
+  {
+    "username": "HRCPL115",
+    "password": "pbkdf2_sha256$720000$HF91omGDuiRlTcgPDm21Pr$a1a1qVR+X2VPTzGREFjtFifaa40BfRSl1WVfeWBU2n8=",
+    "first_name": "Satyen",
+    "last_name": "Deshpande",
+    "email": "satyen@hashrate.in",
+    "reporting_manager": "HRCPL109"
+  },
+  {
+    "username": "HRCPL124",
+    "password": "pbkdf2_sha256$720000$X7jGd6ODsWMfCN4B8xi9EV$pAZxncTxqTQJYSb4PuySPOg5wVOm0Kg3wbifv2sCslg=",
+    "first_name": "Kunal",
+    "last_name": "Dane",
+    "email": "kdane2267@gmail.com",
+    "reporting_manager": "HRCPL112"
+  },
+  {
+    "username": "HRCPL116",
+    "password": "pbkdf2_sha256$720000$hBeCAQLKzjrG4jZsRORnZS$sAX7ZBMKNJTzONEHmcGrvMNrAfxMXZlsUeKt8/AE0aQ=",
+    "first_name": "Shantanu",
+    "last_name": "Mokal",
+    "email": "shantanu@hashrate.in",
+    "reporting_manager": "HRCPL115"
+  },
+  {
+    "username": "HRCPL111",
+    "password": "pbkdf2_sha256$720000$MxX8wcTg6XX8OlTjpUGogV$Eswpufwxm9hUkQ32nQlZyC5uPOqAyVJOzyoOfhTncw0=",
+    "first_name": "Ammar",
+    "last_name": "Patel",
+    "email": "ammar@hashrate.in",
+    "reporting_manager": "HRCPL108"
+  },
+  {
+    "username": "HRCPL119",
+    "password": "pbkdf2_sha256$720000$Gw5DWL4LBS6GVLBXkKkc6N$7f2jFoYJ31hWdi15B9RbkBsH4MvxztIv93D5+n0MxDQ=",
+    "first_name": "Pratikshya",
+    "last_name": "Sahu",
+    "email": "pratikshya@hashrate.in",
+    "reporting_manager": "HRCPL109"
+  },
+  {
+    "username": "HRCPL118",
+    "password": "pbkdf2_sha256$720000$xuEonJo3I42QwLwxHeayw5$ZpdKxMp37rdhKaRazsfGLUdNFHfNJ7oJDZwREQmtlRo=",
+    "first_name": "Isha",
+    "last_name": "Joshi",
+    "email": "isha@hashrate.in",
+    "reporting_manager": "HRCPL115"
+  },
+  {
+    "username": "HRCPL127",
+    "password": "pbkdf2_sha256$720000$v8uL7I7LSk3LcfZG22VTnc$y7f6zpH2uFu4qZ8Wwbfbpj6l1pSFA2D8oxr5cPkYQZE=",
+    "first_name": "Adarsh",
+    "last_name": "Srivastava",
+    "email": "Adarshsri880@gmail.com",
+    "reporting_manager": "HRCPL112"
+  },
+  {
+    "username": "HRCPL108",
+    "password": "pbkdf2_sha256$720000$Rc0kqfRpQjxwasTwiGlZnt$jTz1FTaPeZRBldRh4jHxJpVXCAgIOuz6WaHe+YTxmWk=",
+    "first_name": "Sanjeev",
+    "last_name": "Sharma",
+    "email": "sanjeev@hashrate.in",
+    "reporting_manager": null
+  },
+  {
+    "username": "HRCPL122",
+    "password": "pbkdf2_sha256$720000$mRDpnFq5qNQRRMFUUDc+hA==$R9nwwLLyyfHIkEeqpMm8TFkJuHZdDlm9jnQXXJqVgug=",
+    "first_name": "Abdul",
+    "last_name": "Aamir",
+    "email": "aamir@isiriinc.com",
+    "reporting_manager": "HRCPL112"
+  },
+  {
+    "username": "user1",
+    "password": "pbkdf2_sha256$720000$KOqNWFWFdTntohQFZNGzMQ==$iECWNbxRkaGUKtzNOtGPgcvMpaTe7QtCqVH5LxybWnM=",
+    "first_name": "Ram",
+    "last_name": "Sharma",
+    "email": "ram.sharma@example.com",
+    "reporting_manager": "user2"
+  },
+  {
+    "username": "user2",
+    "password": "pbkdf2_sha256$720000$QQtLsbArk/d6PnnE+TXyGA==$BL1T6G3VPLWMp3TyYd5uQg6JnbUQ6FLHtckjFcBHmfw=",
+    "first_name": "Rahul",
+    "last_name": "Sharma",
+    "email": "rahul.sharma@example.com",
+    "reporting_manager": "user1"
+  }
+]

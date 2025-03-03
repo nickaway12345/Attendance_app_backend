@@ -1,6 +1,8 @@
 package com.example.attendance_calculator.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 public class Leave {
     @JsonProperty("start_date")
