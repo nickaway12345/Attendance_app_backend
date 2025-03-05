@@ -77,7 +77,9 @@ public class LeaveFetchService {
     }
 
     private void insertLeaveIntoDatabase(String date, String status, String leaveType, String username) {
-        String sql = "INSERT INTO LEAVE (date, status, leave_type, username) VALUES (?, ?, ?, ?)";
+        // Use ON CONFLICT clause to update status if the same entry already exists
+        String sql = "INSERT INTO LEAVE (date, status, leave_type, username) VALUES (?, ?, ?, ?) " +
+                "ON CONFLICT (date, leave_type, username) DO UPDATE SET status = EXCLUDED.status";
 
         try (Connection connection = dataSource.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -88,7 +90,7 @@ public class LeaveFetchService {
             statement.setString(4, username);
             statement.executeUpdate();
         } catch (Exception e) {
-            System.err.println("Error inserting leave into database: " + e.getMessage());
+            System.err.println("Error inserting or updating leave into database: " + e.getMessage());
         }
     }
 }
