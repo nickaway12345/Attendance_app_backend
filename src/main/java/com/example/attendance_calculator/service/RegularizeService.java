@@ -3,15 +3,18 @@ package com.example.attendance_calculator.service;
 import com.example.attendance_calculator.model.*;
 import com.example.attendance_calculator.repository.AttendanceRepository;
 import com.example.attendance_calculator.repository.RegularizeRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class RegularizeService {
@@ -21,6 +24,9 @@ public class RegularizeService {
 
     @Autowired
     private AttendanceRepository attendanceRepository;
+
+    @Value("${data.userDataFile.file}")
+    private String FILE_PATH;
 
     // Logger instance
     private static final Logger logger = LoggerFactory.getLogger(RegularizeService.class);
@@ -41,6 +47,7 @@ public class RegularizeService {
 
     public List<RegularizeDTO> getEntriesForApproval(List<String> reportees) {
         List<RegularizeDTO> pendingEntries = new ArrayList<>();
+        Map<String, String> userMap = getUserDataMap();
 
         // Iterate through each reportee (empId)
         for (String empId : reportees) {
@@ -60,6 +67,9 @@ public class RegularizeService {
                 dto.setTotalHours(reg.getTotalHours());
                 dto.setApprovalStatus(reg.getApproval());
 
+                String firstName = userMap.get(empId);
+                dto.setFirstName(firstName != null ? firstName : "Unknown");
+
                 // Add the DTO to the result list
                 pendingEntries.add(dto);
             }
@@ -68,8 +78,33 @@ public class RegularizeService {
         return pendingEntries; // Return all pending entries for reportees
     }
 
+    private Map<String, String> getUserDataMap() {
+        Map<String, String> userMap = new HashMap<>();
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+
+            String userDataFilePath = FILE_PATH;
+
+
+            List<Map<String, Object>> users = mapper.readValue(new FileReader(userDataFilePath), new TypeReference<List<Map<String, Object>>>() {});
+
+
+            for (Map<String, Object> user : users) {
+                String empId = (String) user.get("username");
+                String firstName = (String) user.get("first_name");
+                userMap.put(empId, firstName);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return userMap;
+    }
+
     public List<RegularizeDTO> getRejectedEntries(List<String> reportees) {
         List<RegularizeDTO> pendingEntries = new ArrayList<>();
+        Map<String, String> userMap = getUserDataMap();
 
         // Iterate through each reportee (empId)
         for (String empId : reportees) {
@@ -89,6 +124,8 @@ public class RegularizeService {
                 dto.setTotalHours(reg.getTotalHours());
                 dto.setApprovalStatus(reg.getApproval());
 
+                String firstName = userMap.get(empId);
+                dto.setFirstName(firstName != null ? firstName : "Unknown");
                 // Add the DTO to the result list
                 pendingEntries.add(dto);
             }
@@ -99,6 +136,7 @@ public class RegularizeService {
 
     public List<RegularizeDTO> getApprovedEntries(List<String> reportees) {
         List<RegularizeDTO> pendingEntries = new ArrayList<>();
+        Map<String, String> userMap = getUserDataMap();
 
         // Iterate through each reportee (empId)
         for (String empId : reportees) {
@@ -118,6 +156,8 @@ public class RegularizeService {
                 dto.setTotalHours(reg.getTotalHours());
                 dto.setApprovalStatus(reg.getApproval());
 
+                String firstName = userMap.get(empId);
+                dto.setFirstName(firstName != null ? firstName : "Unknown");
                 // Add the DTO to the result list
                 pendingEntries.add(dto);
             }
@@ -147,7 +187,7 @@ public class RegularizeService {
             String locationIn = updatedRegularize.getLocationIn();
             String locationOut = updatedRegularize.getLocationOut();
             Double totalHours = updatedRegularize.getTotalHours();
-            String day = totalHours >= 9 ? "F" : "H";
+            String day = totalHours >= 8 ? "F" : "H";
 
             // If locationIn or locationOut is null or empty, set them to "Outside Office"
             if (locationIn == null || locationIn.isEmpty()) {

@@ -10,6 +10,7 @@ public class RegularizeDTO {
     private String locationOut;
     private Double totalHours;
     private String approvalStatus;
+    private String firstName;
 
     // Getters and Setters
     public String getEmpId() {
@@ -74,5 +75,13 @@ public class RegularizeDTO {
 
     public void setTotalHours(Double totalHours) {
         this.totalHours = totalHours;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 }

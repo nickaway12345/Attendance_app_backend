@@ -23,7 +23,7 @@ public class UserDataService {
     @Value("${data.userDataFile.file}")
     private String FILE_PATH;
 
-   // @Scheduled(cron = "0 0 0 * * *")
+    @Scheduled(cron = "0 0 0/4 * * *")
     public void fetchAndStoreUserData() {
         try {
             RestTemplate restTemplate = new RestTemplate();

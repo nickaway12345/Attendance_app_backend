@@ -11,6 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>attendance_calculator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>attendance_calculator</name>
 	<description>attendance calculator app</description>
 	<url/>
@@ -97,6 +98,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>attendance.application.api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
