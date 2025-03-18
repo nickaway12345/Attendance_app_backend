@@ -83,11 +83,13 @@ public class LeaveFetchService {
 
         try (Connection connection = dataSource.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
+            String usernameValue = (username == null) ? "Unknown" : username;
+
 
             statement.setString(1, date);
             statement.setString(2, status);
             statement.setString(3, leaveType);
-            statement.setString(4, username);
+            statement.setString(4, usernameValue);
             statement.executeUpdate();
         } catch (Exception e) {
             System.err.println("Error inserting or updating leave into database: " + e.getMessage());

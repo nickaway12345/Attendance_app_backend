@@ -1,8 +1,10 @@
 package com.example.attendance_calculator.controller;
 
 import com.example.attendance_calculator.model.Attendance;
+import com.example.attendance_calculator.model.Regularization;
 import com.example.attendance_calculator.model.Regularize;
 import com.example.attendance_calculator.service.AttendanceService;
+import com.example.attendance_calculator.service.RegularizationService;
 import com.example.attendance_calculator.service.RegularizeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +23,9 @@ public class RegularizationController {
     @Autowired
     private RegularizeService regularizeService;
 
+    @Autowired
+    private RegularizationService service;
+
     @PostMapping("/sync")
     public ResponseEntity<String> syncregularize(@RequestBody Regularize regularizeRequest) {
         try {
@@ -37,6 +42,16 @@ public class RegularizationController {
             logger.error("Response: {}", errorMessage);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(errorMessage);
+        }
+    }
+
+    @PostMapping("/service")
+    public ResponseEntity<String> submitRegularization(@RequestBody Regularization regularization) {
+        try {
+            service.submitRegularization(regularization);
+            return ResponseEntity.ok("Regularization submitted successfully!");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Failed to submit regularization: " + e.getMessage());
         }
     }
 }

@@ -2,6 +2,7 @@ package com.example.attendance_calculator.service;
 
 import com.example.attendance_calculator.model.Attendance;
 import com.example.attendance_calculator.repository.AttendanceRepository;
+import com.example.attendance_calculator.repository.AttendanceServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
