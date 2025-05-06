@@ -3,6 +3,7 @@ package com.example.attendance_calculator.service;
 import com.example.attendance_calculator.DjangoPasswordHasher;
 import com.example.attendance_calculator.dto.LoginRequest;
 import com.example.attendance_calculator.model.User;
+import com.example.attendance_calculator.model.UserData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 @Service
@@ -62,5 +64,49 @@ public class UserService {
         } catch (InvalidKeySpecException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Optional<UserData> getUserDataByUsername(String username) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            List<UserData> users = mapper.readValue(
+                    Paths.get(filePath).toFile(),
+                    mapper.getTypeFactory().constructCollectionType(List.class, UserData.class)
+            );
+
+            return users.stream()
+                    .filter(user -> user.getUsername().equalsIgnoreCase(username))
+                    .findFirst()
+                    .map(this::sanitizeUserData);  // Replace nulls with "unknown"
+
+        } catch (IOException e) {
+            logger.severe("Error reading user data file: " + e.getMessage());
+            return Optional.empty();
+        }
+    }
+
+    /**
+     * Replaces any null fields in UserData with "unknown".
+     */
+    private UserData sanitizeUserData(UserData user) {
+        user.setPassword("unknown");
+        if (user.getFirstName() == null) user.setFirstName("unknown");
+        if (user.getLastName() == null) user.setLastName("unknown");
+        if (user.getEmail() == null) user.setEmail("unknown");
+        if (user.getReportingManager() == null) user.setReportingManager("unknown");
+        if (user.getSite() == null) user.setSite("unknown");
+        if (user.getGender() == null) user.setGender("unknown");
+        if (user.getDoj() == null) user.setDoj("unknown");
+        if (user.getDepartment() == null) user.setDepartment("unknown");
+        if (user.getBdate() == null) user.setBdate("unknown");
+        if (user.getPhone() == null) user.setPhone("unknown");
+        if (user.getMediclaim() == null) user.setMediclaim("unknown");
+        return user;
+    }
+
+    public boolean isAdmin(String username) {
+        return getUserDataByUsername(username)
+                .map(u -> "Admin".equalsIgnoreCase(u.getRole()))
+                .orElse(false);
     }
 }

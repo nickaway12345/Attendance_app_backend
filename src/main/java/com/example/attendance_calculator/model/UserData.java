@@ -1,8 +1,10 @@
 package com.example.attendance_calculator.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UserData {
     private String username;
     private String password;
@@ -18,6 +20,31 @@ public class UserData {
 
     @JsonProperty("reporting_manager")
     private String reportingManager;
+
+    @JsonProperty("site")
+    private String site;
+
+    @JsonProperty("gender")
+    private String gender;
+
+    @JsonProperty("role")
+    private String role;
+
+    @JsonProperty("doj")
+    private String doj;
+
+    @JsonProperty("department")
+    private String department;
+
+    @JsonProperty("bdate")
+    private String bdate;
+
+    @JsonProperty("phone")
+    private String phone;
+
+    @JsonProperty("mediclaim")
+    private String mediclaim;
+
 
     // Getters and Setters
     public String getUsername() { return username; }
@@ -37,5 +64,69 @@ public class UserData {
 
     public String getReportingManager() { return reportingManager; }
     public void setReportingManager(String reportingManager) { this.reportingManager = reportingManager; }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDoj() {
+        return doj;
+    }
+
+    public void setDoj(String doj) {
+        this.doj = doj;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getBdate() {
+        return bdate;
+    }
+
+    public void setBdate(String bdate) {
+        this.bdate = bdate;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getMediclaim() {
+        return mediclaim;
+    }
+
+    public void setMediclaim(String mediclaim) {
+        this.mediclaim = mediclaim;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
 

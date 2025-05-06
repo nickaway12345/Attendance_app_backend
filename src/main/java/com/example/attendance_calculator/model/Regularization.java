@@ -3,7 +3,6 @@ package com.example.attendance_calculator.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
@@ -25,6 +24,13 @@ public class Regularization {
     @Column(nullable = false, length = 500)
     private String reason;
 
+    @Column( length = 20)
+    private String status;  // e.g., "Pending", "Approved", "Rejected"
+
+    @Column(length = 100)
+    private String approvedBy; // Name or ID of the approver
+
+    // Getters and Setters
     public RegularizationId getId() {
         return id;
     }
@@ -80,5 +86,20 @@ public class Regularization {
     public void setReason(String reason) {
         this.reason = reason;
     }
-}
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getApprovedBy() {
+        return approvedBy;
+    }
+
+    public void setApprovedBy(String approvedBy) {
+        this.approvedBy = approvedBy;
+    }
+}
